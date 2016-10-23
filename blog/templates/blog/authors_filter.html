@@ -1,0 +1,8 @@
+{% load listtags %}
+{% get_authors as authors %}
+<div class="authors_filter">
+    <p class="author_filter_title">@Authors</p>
+    {% for author in authors %}
+        <a href="{% url 'blog:author_by_nick' author.nick %}"><div class="author_name">@{{ author.nick }}</div></a>
+    {% endfor %}
+</div>

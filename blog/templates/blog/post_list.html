@@ -1,0 +1,43 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/liststyle.css' %}"/>
+<div class="page_header" style="background: #75abc5;padding: 0;margin: 0;">
+  	<div class="home_page">
+      <a href="{% url 'blog:post_list' %}"><p>Home Page</p></a>
+    </div>
+    <div class="new_post">
+      <a href="{% url 'blog:add_post' %}">
+          <p>Add new post</p>
+      </a>
+    </div>
+</div>
+<div class="left_content">
+    {% include 'blog/authors_filter.html' %}
+
+    {% include 'blog/tags_filter.html' %}
+</div>
+
+<!-date_filter-->
+{% include 'blog/date_filter.html' %}
+
+{% if posts_list %}
+<div class="content_wrapper">
+    <div class="content_list">
+        {% if author %}
+            <p class="author_title">Latest posts of {{ author.name }} {{ author.surname }} @{{ author.nick }}</p>
+        {% endif %}
+        {% for post in posts_list %}
+           <a href="{% url 'blog:publication_detail' post.id %}" class="post_link">
+               <div class="post_container">
+                    {% if post.image %}
+                       <img class="post_image" src="{{ post.image.url }}" alt="Post Image"/>
+                    {% endif %}
+                       <p class="post_title">{{ post.header }}</p>
+               </div>
+           </a>
+        {% endfor %}
+
+    </div>
+</div>
+{% else %}
+   <p>Haven't any posts yet</p>
+{% endif %}

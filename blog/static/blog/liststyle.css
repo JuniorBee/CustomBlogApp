@@ -1,0 +1,173 @@
+.post_container {
+    width: 270px;
+    height: 240px;
+    margin-bottom: 30px;
+    border: 1px solid darkturquoise;
+    margin-left: 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.post_container:hover {
+    box-shadow: 0px 5px 4px 1px #B9B9B9;
+}
+
+li {
+    list-style-type: none;
+}
+
+.post_image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.post_title {
+    background: ivory;
+    margin-top: -80px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+body {
+    /* background: #f5f5f5; */
+}
+
+.content_list {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    height: 90%;
+    width: 889px;
+    overflow-y: scroll;
+}
+
+.right_content {
+    background: #07a;
+    float: right;
+    height: 300px;
+    width: 220px;
+    position: relative;
+    min-height: 500px;
+    box-shadow: 0 0 10px;
+}
+
+.left_content {
+    float: left;
+    width: 215px;
+    position: relative;
+    min-height: 500px;
+    margin-right: 10px;
+    padding-right: 5px;
+}
+
+.authors_filter {
+    width: 220px;
+    background: #07a;
+    min-height: 250px;
+    margin-bottom: 20px;
+    border-radius: 3%;
+    border-top: 35px solid #005980;
+    box-shadow: 0 0 10px;
+}
+
+.tags_filter {
+    width: 220px;
+    background: #07a;
+    min-height: 200px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    box-shadow: 0 0 10px;
+}
+
+.author_filter_title {
+    margin: 0;
+    text-align: center;
+    font-family: cursive;
+    color: white;
+    padding-top: 0px;
+    margin-top: -35px;
+    font-size: x-large;
+}
+
+.tag_filter_title {
+    margin: 0;
+    text-align: center;
+    font-family: cursive;
+    color: white;
+    font-size: x-large;
+    margin-left: -3px;
+    background: #014e6f;
+}
+
+.filter_by_date_label {
+    margin: 0;
+    font-family: monospace;
+    color: darkturquoise;
+    padding-top: 2px;
+    padding-left: 27px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.filter_by_date {
+    margin: 0;
+    font-family: monospace;
+    color: aliceblue;
+    padding-top: 5px;
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: large;
+}
+
+.tag_name {
+    display: inline-block;
+    margin-left: 3px;
+    margin-top: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+    color: white;
+    background: darkturquoise;
+    box-shadow: 0px 0px 5px;
+    border: 1px solid #01d9dc;
+    border-radius: 7%;
+    font-size: 15px;
+    font-family: arial;
+}
+
+.author_name {
+    display: inline-block;
+    margin-left: 6px;
+    margin-top: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+    color: white;
+    background: skyblue;
+    box-shadow: 0px 0px 7px skyblue;
+    border: 1px solid darkseagreen;
+    border-radius: 5px;
+    font-size: large;
+    font-family: arial;
+}
+
+.post_link {
+
+}
+
+.content_container {
+
+}
+
+.content_wrapper {
+    position: relative;
+    width: 875px;
+    overflow: hidden;
+    box-shadow: 0 0 10px darkgray;
+}
+
+
+.filter_label {
+    text-decoration: none;
+}

@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/detailstyle.css' %}"/>
+{% if error_message %}
+    <strong>{{ error_message }}</strong>
+{% else %}
+<div class="post_header">{{ post.header }}</div>
+
+<div class="page_content">
+    {% if post.image %}
+        <div style="text-align:center;"><img class="post_image" src="{{ post.image.url }}" alt="Post Image"/></div>
+    {% endif %}
+    <div class="post_content">
+        <p>{{ post.content }}</p>
+        <br/><br/><br/>
+    </div>
+
+    <div>Author : {{ post.author.nick }}</div>
+
+    <div>Published at {{ post.pub_date }}</div>
+
+    <div class="tags">
+        {% for tag in post.tags.all %}
+            <a href="{% url 'blog:posts_by_tag' tag.tag_name %}"><div class="tag">#{{ tag.tag_name }}</div></a>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

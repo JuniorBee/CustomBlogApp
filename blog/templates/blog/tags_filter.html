@@ -1,0 +1,8 @@
+{% load listtags %}
+{% get_tags as tags %}
+<div class="tags_filter">
+    <p class="tag_filter_title">#Tags</p>
+    {% for tag in tags %}
+        <a href="{% url 'blog:posts_by_tag' tag.tag_name %}"><div class="tag_name">#{{ tag.tag_name }}</div></a>
+    {% endfor %}
+</div>

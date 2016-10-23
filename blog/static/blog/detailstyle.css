@@ -1,0 +1,39 @@
+body {
+    background : white;
+}
+
+.tag {
+    float: right;
+    background: #ececec;
+    color: #03A9F4;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-family: cursive;
+    border-radius: 5%;
+    margin-right: 5px;
+    box-shadow: 1px 1px 5px 0px rgb(166, 185, 187);
+    border: solid 1px cadetblue;
+}
+
+.post_header {
+    text-decoration: underline;
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-weight: 500;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.post_content {
+    font-size: 15px;
+    line-height: 1.4;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.page_content {
+    padding: 1% 15% 0% 15%;
+}
+
+.post_image {
+    max-width: 600px;
+}

@@ -1,0 +1,49 @@
+{% load formtags %}
+{% load datetimetags %}
+{% datetimeform as form %}
+{% this_year as year %}
+{% this_month as month %}
+{% this_day as day %}
+{% this_week as week %}
+<div class="right_content">
+    <p class="filter_by_date">
+        FILTER BY DATE
+    </p>
+
+    <a href="{% url 'blog:posts_by_date' year month day 0 %}" class="filter_label">
+        <p class="filter_by_date_label">
+            Today
+        </p>
+    </a>
+
+    <a href="{% url 'blog:posts_by_date' year 0 0 week %}" class="filter_label">
+        <p class="filter_by_date_label">
+            This week
+        </p>
+    </a>
+
+    <a href="{% url 'blog:posts_by_date' year month 0 0 %}" class="filter_label">
+        <p class="filter_by_date_label">
+            This month
+        </p>
+    </a>
+
+
+    <a href="{% url 'blog:posts_by_date' year 0 0 0 %}" class="filter_label">
+        <p class="filter_by_date_label">
+            This year
+        </p>
+    </a>
+
+
+
+    <p class="filter_by_date_label">
+        Custom date
+    </p>
+
+    <form method="POST" action="{% url 'blog:filter_form' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit"/>
+    </form>
+</div>
